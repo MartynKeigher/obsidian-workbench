@@ -1406,6 +1406,26 @@ body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .mod-root .sidebar-
   z-index: var(--layer-cover, 5);
 }
 
+/* Hidden frame: clear the window controls drawn over the top-right corner */
+body:not(.is-mobile).is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-right-sidedock-open) .mod-root .sidebar-toggle-button.mod-right {
+  right: calc(8px + var(--frame-right-space, 0px));
+}
+
+/* Tab-list arrow: share the toggle's vertical padding so the icons line up */
+body:not(.is-mobile) .mod-root .workspace-tab-header-container > .workspace-tab-header-tab-list {
+  padding-top: 8px;
+  padding-bottom: 7px;
+}
+
+/* Keep the tab-list arrow beside the pinned toggle */
+body:not(.is-mobile).is-hidden-frameless:not(.is-fullscreen) .workspace:not(.is-right-sidedock-open) .mod-root .workspace-tab-header-container > .workspace-tab-header-tab-list {
+  position: fixed;
+  right: calc(8px + var(--frame-right-space, 0px) + 28px + 2px);
+  margin: 0;
+  padding: 8px 0 7px;
+  z-index: var(--layer-cover, 5);
+}
+
 /* Outline */
 
 .workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
