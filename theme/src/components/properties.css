@@ -1,0 +1,21 @@
+body.theme-light,
+body.theme-dark {
+  --metadata-divider-width: 0;
+}
+
+.metadata-property {
+  min-height: 30px;
+  align-items: center;
+}
+
+.metadata-property-key,
+.metadata-property-value {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+
+.metadata-property-key,
+.metadata-property-key-input {
+  color: var(--muted);
+}

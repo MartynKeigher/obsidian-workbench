@@ -1,0 +1,11 @@
+# Local tool data
+
+
+# Dependencies and logs
+node_modules/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

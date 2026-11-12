@@ -1,0 +1,124 @@
+body.theme-light,
+body.theme-dark {
+  /* Surfaces */
+  --background-primary: var(--pane);
+  --background-primary-alt: var(--tile);
+  --background-secondary: var(--bg);
+  --background-secondary-alt: var(--bg);
+  --background-modifier-border: var(--line);
+  --background-modifier-border-hover: var(--control-line);
+  --background-modifier-border-focus: var(--accent);
+  --background-modifier-hover: var(--hover);
+  --background-modifier-active-hover: var(--accent-soft);
+  --background-modifier-form-field: var(--control);
+
+  /* Buttons and fields: flat, bordered controls */
+  --interactive-normal: var(--control);
+  --interactive-hover: var(--hover);
+  --input-radius: 7px;
+  --input-shadow: none;
+  --input-shadow-hover: none;
+
+  /* Note header */
+  --file-header-border: 0;
+  --file-header-justify: start;
+  --file-header-font-size: 13px;
+
+  /* Text */
+  --text-normal: var(--ink);
+  --text-muted: var(--muted);
+  --text-faint: var(--faint);
+  --text-accent: var(--accent);
+  --text-accent-hover: var(--accent-ink);
+  --text-on-accent: var(--on-accent);
+  --text-highlight-bg: var(--highlight);
+  --text-selection: color-mix(in srgb, var(--accent) 30%, transparent);
+  --link-color: var(--accent);
+  --link-color-hover: var(--accent-ink);
+  --link-external-color: var(--accent);
+  --link-unresolved-color: var(--muted);
+  --link-unresolved-opacity: 1;
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: var(--muted);
+
+  /* Accent */
+  --interactive-accent: var(--accent);
+  --interactive-accent-hover: var(--accent-ink);
+  --checkbox-color: var(--accent);
+  --checkbox-color-hover: var(--accent-ink);
+
+  /* Navigation and tags */
+  --nav-item-background-active: var(--accent-soft);
+  --nav-item-color-active: var(--accent-ink);
+  --tag-background: var(--accent-soft);
+  --tag-background-hover: var(--accent-soft);
+  --tag-color: var(--accent-ink);
+  --tag-color-hover: var(--accent-ink);
+  --tag-border-color: var(--accent-line);
+
+  /* Chrome */
+  --titlebar-background: var(--header);
+  --titlebar-background-focused: var(--header);
+  --tab-container-background: var(--header);
+  --tab-outline-color: transparent;
+  --tab-outline-color-hover: transparent;
+  --ribbon-background: var(--bg);
+  --ribbon-background-collapsed: var(--bg);
+  --status-bar-background: var(--wb-note-bg, var(--pane));
+  --status-bar-border-width: 0;
+  --status-bar-border-color: transparent;
+  --status-bar-radius: 10px 10px 0 0;
+  --scrollbar-thumb-bg: var(--scrollbar);
+  --scrollbar-active-thumb-bg: var(--scrollbar-hover);
+  --scrollbar-width: 10px;
+  --scrollbar-height: 10px;
+  --scrollbar-radius: 999px;
+
+  /* Code */
+  --code-background: var(--code);
+  --code-normal: var(--ink);
+  --code-keyword: var(--hl-keyword);
+  --code-function: var(--hl-title);
+  --code-string: var(--hl-string);
+  --code-comment: var(--hl-comment);
+  --code-value: var(--hl-number);
+  --code-property: var(--hl-variable);
+  --code-tag: var(--hl-builtin);
+  --code-important: var(--hl-params);
+  --code-operator: var(--ink-2);
+  --code-punctuation: var(--ink-2);
+
+  /* Tables */
+  --table-header-background: var(--pane);
+  --table-border-color: var(--line-soft);
+
+  /* Type */
+  --font-text-theme: var(--font);
+  --font-interface-theme: var(--font);
+  --font-monospace-theme: var(--mono);
+  --line-height-normal: 1.55;
+}
+
+body.theme-light {
+  --accent-h: 187.57;
+  --accent-s: 79.86%;
+  --accent-l: 27.25%;
+  --callout-default: 14, 111, 125;
+}
+
+body.theme-dark {
+  --accent-h: 186.51;
+  --accent-s: 53.09%;
+  --accent-l: 52.35%;
+  --callout-default: 69, 184, 198;
+  --bold-color: var(--accent-ink);
+}
+
+body.theme-light[style*="--accent-h"],
+body.theme-dark[style*="--accent-h"] {
+  --accent: var(--color-accent);
+  --accent-ink: color-mix(in srgb, var(--color-accent) 70%, var(--ink));
+  --accent-soft: color-mix(in srgb, var(--color-accent) 14%, var(--pane));
+  --accent-line: color-mix(in srgb, var(--color-accent) 30%, var(--pane));
+  --on-accent: #ffffff;
+}

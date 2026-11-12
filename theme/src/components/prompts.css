@@ -1,0 +1,66 @@
+.prompt {
+  background-color: var(--wb-note-bg, var(--pane));
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0;
+}
+
+.prompt-input-container {
+  border-bottom: 1px solid var(--line-soft);
+  padding: 4px 6px;
+}
+
+.prompt-input-container input.prompt-input {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.prompt-input-container input.prompt-input::placeholder {
+  color: var(--muted);
+}
+
+.prompt-results {
+  padding: 6px;
+}
+
+.prompt .suggestion-item {
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.prompt .suggestion-item.is-selected {
+  background-color: var(--nav-item-background-active);
+  color: var(--nav-item-color-active);
+  font-weight: 700;
+}
+
+.prompt .suggestion-item.is-selected :is(.suggestion-title, .suggestion-note) {
+  color: inherit;
+}
+
+.prompt .suggestion-note {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.prompt .suggestion-empty {
+  color: var(--muted);
+}
+
+.prompt-instructions {
+  border-top: 1px solid var(--line-soft);
+  padding: 8px 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.prompt-instruction-command {
+  color: var(--ink-2);
+  font-weight: 700;
+}

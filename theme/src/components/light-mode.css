@@ -1,0 +1,170 @@
+/* Palette */
+
+body.theme-light {
+  --accent-ink: #0b4f4a;
+  --wb-note-bg: #f7f2e7;
+  --wb-code-bg: #ece5d6;
+  --wb-code-line: #d9d0bc;
+  --nav-item-color-active: #0a525c;
+}
+
+/* Note header */
+
+body.theme-light .view-header-title {
+  color: var(--accent-ink);
+}
+
+/* Headings */
+
+body.theme-light {
+  --h2-color: var(--accent-ink);
+  --h3-color: var(--accent-ink);
+  --h4-color: var(--accent-ink);
+}
+
+body.theme-light .markdown-rendered :is(h2, h3, h4) {
+  color: var(--accent-ink);
+}
+
+/* Sidebar labels */
+
+body.theme-light {
+  --nav-heading-color: var(--accent-ink);
+  --nav-heading-color-hover: var(--accent-ink);
+  --nav-heading-color-collapsed: var(--accent-ink);
+  --nav-heading-color-collapsed-hover: var(--accent-ink);
+}
+
+body.theme-light :is(.mod-left-split, .mod-right-split) .nav-header::before,
+body.theme-light:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+body.theme-light :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
+  color: var(--accent-ink);
+}
+
+body.theme-light .nav-folder-title,
+body.theme-light .nav-folder-title:not(:hover) .collapse-icon,
+body.theme-light .nav-folder-title:not(:hover) .collapse-icon svg.svg-icon {
+  color: var(--accent-ink);
+}
+
+/* Note header icons */
+
+body.theme-light .view-header {
+  --icon-color: var(--accent-ink);
+  --icon-color-hover: var(--accent-ink);
+  --icon-color-active: var(--accent-ink);
+  --icon-color-focused: var(--accent-ink);
+}
+
+body.theme-light :is(.view-header-breadcrumb, .view-header-breadcrumb-separator),
+body.theme-light .view-header-nav-buttons .clickable-icon {
+  color: var(--accent-ink);
+}
+
+/* Vault footer */
+
+body.theme-light .workspace-drawer-vault-switcher {
+  --icon-color: var(--accent-ink);
+  --icon-color-hover: var(--accent-ink);
+  color: var(--accent-ink);
+}
+
+body.theme-light :is(.workspace-drawer-vault-name, .workspace-drawer-vault-switcher-icon, .workspace-drawer-vault-switcher-icon svg) {
+  color: var(--accent-ink);
+}
+
+body .menu:has(.svg-icon.open-vault) {
+  --icon-color: var(--h1-color);
+  --icon-color-hover: var(--h1-color);
+}
+
+body .menu:has(.svg-icon.open-vault) :is(.menu-item-title, .menu-item-icon, .menu-item-icon svg) {
+  color: var(--h1-color);
+}
+
+/* Status bar */
+
+body.theme-light .status-bar {
+  --icon-color: var(--accent-ink);
+  --icon-color-hover: var(--accent-ink);
+  color: var(--accent-ink);
+}
+
+/* Tables */
+
+body.theme-light .markdown-rendered th {
+  color: var(--accent-ink);
+}
+
+/* Bold and H5/H6 */
+
+body.theme-light {
+  --bold-color: var(--accent-ink);
+}
+
+body.theme-light {
+  --h5-color: var(--muted);
+  --h6-color: var(--muted);
+}
+
+/* Card fills */
+
+body.theme-light :is(.mod-left-split, .mod-right-split) {
+  --background-secondary: var(--wb-note-bg);
+}
+
+body.theme-light .workspace-ribbon.mod-primary {
+  --pane: var(--wb-note-bg);
+}
+
+body.theme-light .workspace-ribbon.mod-primary .side-dock-actions,
+body.theme-light .workspace-drawer-vault-actions {
+  --icon-color: var(--h1-color);
+  --icon-color-hover: var(--h1-color);
+  --icon-color-active: var(--h1-color);
+  --icon-color-focused: var(--h1-color);
+}
+
+body.theme-light :is(.mod-root, .mod-left-split, .mod-right-split) {
+  --pane: var(--wb-note-bg);
+  --background-primary: var(--wb-note-bg);
+  --file-header-background: var(--wb-note-bg);
+  --file-header-background-focused: var(--wb-note-bg);
+  --mermaid-background: var(--wb-note-bg);
+  --search-result-background: var(--wb-note-bg);
+  --bases-table-header-background: var(--wb-note-bg);
+  --bases-table-summary-background: var(--wb-note-bg);
+  --table-header-background: var(--wb-note-bg);
+  --code: var(--wb-code-bg);
+  --code-background: var(--wb-code-bg);
+}
+
+/* Header band */
+
+body.theme-light {
+  --header: #0f2a27;
+  --header-2: color-mix(in srgb, #0f2a27 86%, #ffffff);
+  --header-line: color-mix(in srgb, #0f2a27 76%, #ffffff);
+  --header-muted: #c3d8d5;
+  --wb-card-line: var(--wb-note-bg);
+}
+
+/* Tab feet */
+
+body.theme-light:not(.is-mobile) :is(.mod-root, .mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::before,
+body.theme-light:not(.is-mobile) :is(.mod-root, .mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  bottom: 0;
+  height: 10px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  clip-path: none;
+}
+
+body.theme-light:not(.is-mobile) :is(.mod-root, .mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::before {
+  background: radial-gradient(circle at 0 0, transparent 7.5px, var(--pane) 8.5px);
+}
+
+body.theme-light:not(.is-mobile) :is(.mod-root, .mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  background: radial-gradient(circle at 100% 0, transparent 7.5px, var(--pane) 8.5px);
+}

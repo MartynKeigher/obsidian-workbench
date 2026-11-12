@@ -1,0 +1,51 @@
+.markdown-rendered pre {
+  position: relative;
+  background-color: var(--code);
+  border: 1px solid var(--wb-code-line, var(--line));
+  border-radius: 8px;
+  padding: 12px 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.markdown-rendered pre code {
+  white-space: pre-wrap;
+  font-size: 0.8125em;
+  line-height: 1.65;
+}
+
+.markdown-rendered pre code::before {
+  content: "";
+  float: right;
+  width: 56px;
+  height: 1em;
+}
+
+.markdown-rendered pre .copy-code-button {
+  background-color: var(--pane);
+  border: 1px solid var(--control-line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 9px;
+  box-shadow: none;
+}
+
+.markdown-rendered pre .copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: auto;
+  opacity: 1;
+}
+
+.markdown-rendered pre:not(:hover) > button.copy-code-button {
+  display: block;
+}
+
+.markdown-rendered pre .copy-code-button:hover {
+  background-color: var(--hover);
+}

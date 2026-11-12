@@ -1,0 +1,102 @@
+body.theme-light,
+body.theme-dark {
+  --canvas-background: var(--bg);
+  --canvas-dot-pattern: var(--control-line);
+}
+
+.canvas-wrapper {
+  background-color: var(--bg);
+}
+
+/* Cards */
+.canvas-node-container {
+  background-color: var(--pane);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 7%);
+}
+
+.canvas-node.mod-canvas-color-1 > .canvas-node-container { background-color: var(--err-bg); border-color: var(--err-line); }
+.canvas-node.mod-canvas-color-2 > .canvas-node-container { background-color: var(--warn-bg); border-color: var(--warn-line); }
+.canvas-node.mod-canvas-color-3 > .canvas-node-container { background-color: var(--match-row); border-color: var(--match-edge); }
+.canvas-node.mod-canvas-color-4 > .canvas-node-container { background-color: var(--ok-bg); border-color: var(--ok-line); }
+.canvas-node.mod-canvas-color-5 > .canvas-node-container { background-color: var(--accent-soft); border-color: var(--accent-line); }
+.canvas-node.mod-canvas-color-6 > .canvas-node-container {
+  background-color: color-mix(in srgb, var(--hl-keyword) 12%, var(--pane));
+  border-color: color-mix(in srgb, var(--hl-keyword) 45%, var(--pane));
+}
+
+.canvas-node[style*="--canvas-color"] > .canvas-node-container {
+  background-color: color-mix(in srgb, rgb(var(--canvas-color)) 10%, var(--pane));
+  border-color: color-mix(in srgb, rgb(var(--canvas-color)) 45%, var(--pane));
+}
+
+/* Selection */
+.canvas-node.is-focused > .canvas-node-container,
+.canvas-node.is-selected > .canvas-node-container {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 24px rgb(0 0 0 / 14%);
+}
+
+/* Groups */
+.canvas-node-group > .canvas-node-container {
+  border-color: var(--accent-line);
+  background-color: color-mix(in srgb, var(--accent-soft) 45%, transparent);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.canvas-group-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  background: none;
+}
+
+.canvas-node-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Edges */
+.canvas-edges g:not(.is-themed):not([class*="mod-canvas-color"]):not(.is-focused):not(:hover) .canvas-display-path {
+  stroke: var(--muted);
+  stroke-width: 2px;
+}
+
+.canvas-path-label {
+  background-color: var(--bg);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+/* Controls and the add-card menu */
+.canvas-control-group,
+.canvas-card-menu {
+  background-color: var(--pane);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
+  overflow: hidden;
+}
+
+.canvas-card-menu {
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+}
+
+.canvas-control-item,
+.canvas-card-menu-button {
+  color: var(--muted);
+}
+
+.canvas-control-item + .canvas-control-item {
+  border-top: 1px solid var(--line-soft);
+}

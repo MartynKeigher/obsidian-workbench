@@ -1,0 +1,43 @@
+/* Sidebar toggle */
+
+body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .mod-root .workspace-tab-header-container .sidebar-toggle-button.mod-right {
+  margin-top: 0;
+}
+
+body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .mod-root .sidebar-toggle-button.mod-right {
+  position: fixed;
+  right: 8px;
+  margin-top: calc(var(--wb-gap) * -1);
+  padding-left: 0;
+  padding-right: 0;
+  z-index: var(--layer-cover, 5);
+}
+
+/* Outline */
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+  border-radius: 8px;
+  background-color: var(--nav-item-background-active);
+  color: var(--nav-item-color-active);
+  font-weight: 700;
+}
+
+/* Backlinks and outgoing links */
+
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self .tree-item-inner {
+  font-weight: 700;
+}
+
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self:not(:first-child) {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+  border-radius: 0;
+}
