@@ -1,0 +1,187 @@
+.callout {
+  --wb-cc: rgb(var(--callout-color));
+  background-color: color-mix(in srgb, var(--wb-cc) 10%, var(--pane));
+  border: 1px solid color-mix(in srgb, var(--wb-cc) 30%, var(--pane));
+  border-left: 4px solid var(--wb-cc);
+  border-radius: 6px;
+  padding: 10px 14px;
+  mix-blend-mode: normal;
+}
+
+.callout-title {
+  gap: 8px;
+  color: var(--wb-cc-title, var(--wb-cc));
+  font-weight: 700;
+}
+
+.callout-title-inner {
+  flex: 0 1 auto;
+  font-weight: 700;
+}
+
+.callout-content {
+  color: var(--ink);
+}
+
+.callout-fold {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.callout-fold .svg-icon {
+  display: none;
+}
+
+.callout-fold::after {
+  content: none;
+}
+
+.callout-fold::before {
+  content: '';
+  display: block;
+  width: var(--wb-chevron-size);
+  height: var(--wb-chevron-size);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: var(--wb-chevron-open);
+  transition: transform 0.15s ease;
+}
+
+.callout.is-collapsed .callout-fold::before,
+.callout-fold.is-collapsed::before {
+  transform: var(--wb-chevron-closed);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callout-fold::before {
+    transition: none;
+  }
+}
+
+/* Types and their aliases */
+
+.callout[data-callout="note"] {
+  --wb-cc: var(--accent);
+  --callout-icon: lucide-pencil;
+}
+
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --wb-cc: var(--hl-comment);
+  --callout-icon: lucide-clipboard-list;
+}
+
+.callout[data-callout="info"] {
+  --wb-cc: var(--hl-variable);
+  --callout-icon: lucide-info;
+}
+
+.callout[data-callout="todo"] {
+  --wb-cc: var(--ink-2);
+  --callout-icon: lucide-check-circle-2;
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  --wb-cc: var(--hl-builtin);
+  --callout-icon: lucide-flame;
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --wb-cc: var(--ok);
+  --callout-icon: lucide-check;
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --wb-cc: var(--hl-title);
+  --callout-icon: lucide-help-circle;
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --wb-cc: var(--warn);
+  --callout-icon: lucide-alert-triangle;
+}
+
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] {
+  --wb-cc: var(--err-ink);
+  --callout-icon: lucide-x;
+}
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"] {
+  --wb-cc: var(--hl-string);
+  --callout-icon: lucide-zap;
+}
+
+.callout[data-callout="bug"] {
+  --wb-cc: var(--label);
+  --callout-icon: lucide-bug;
+}
+
+.callout[data-callout="example"] {
+  --wb-cc: var(--hl-keyword);
+  --callout-icon: lucide-list;
+}
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --wb-cc: var(--muted);
+  --callout-icon: lucide-quote;
+}
+
+.callout[data-callout="quote"] .callout-content,
+.callout[data-callout="cite"] .callout-content {
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+/* PowerShell */
+.callout[data-callout="powershell"] {
+  --callout-color: 83, 145, 254;
+  --callout-icon: lucide-terminal;
+  --wb-cc-title: #e8f0ff;
+  background-color: #012456;
+  border-color: color-mix(in srgb, #5391fe 45%, #012456);
+  border-left-color: #5391fe;
+}
+
+.callout[data-callout="powershell"] .callout-content {
+  color: #e8f0ff;
+}
+
+.cm-callout:has(> .callout[data-callout="powershell"]) .edit-block-button {
+  color: #e8f0ff;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout .edit-block-button {
+  translate: 0 5px;
+}
+
+/* Light mode */
+body.theme-light .callout[data-callout="abstract"],
+body.theme-light .callout[data-callout="summary"],
+body.theme-light .callout[data-callout="tldr"],
+body.theme-light .callout[data-callout="success"],
+body.theme-light .callout[data-callout="check"],
+body.theme-light .callout[data-callout="done"],
+body.theme-light .callout[data-callout="warning"],
+body.theme-light .callout[data-callout="caution"],
+body.theme-light .callout[data-callout="attention"] {
+  --wb-cc-title: color-mix(in srgb, var(--wb-cc) 75%, var(--ink));
+}

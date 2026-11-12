@@ -1,0 +1,21 @@
+.markdown-rendered .markdown-embed {
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  background-color: var(--tile);
+  padding: 8px 14px;
+}
+
+.markdown-rendered .image-embed img {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.markdown-rendered .footnotes {
+  font-size: 0.84375em;
+  color: var(--muted);
+}
+
+.markdown-rendered .math-block {
+  margin: 6px 0 12px;
+}

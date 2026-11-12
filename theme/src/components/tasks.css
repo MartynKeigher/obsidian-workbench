@@ -1,0 +1,12 @@
+body.theme-light,
+body.theme-dark {
+  --checklist-done-color: color-mix(in srgb, var(--ink) 48%, var(--pane));
+  --checklist-done-decoration: line-through;
+}
+
+.markdown-rendered .task-list-item:is([data-task="x"], [data-task="X"]) {
+  color: var(--checklist-done-color);
+  font-style: italic;
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in srgb, var(--ink) 30%, var(--pane));
+}

@@ -1,0 +1,12 @@
+body:not(.is-mobile) .workspace-ribbon.mod-primary {
+  --ribbon-background: var(--pane);
+  background-color: var(--pane);
+  margin-top: calc(var(--header-height) + var(--wb-gap));
+  padding-top: 14px;
+  border-top: 1px solid var(--wb-card-line, var(--line));
+  border-top-right-radius: 10px;
+}
+
+body:not(.is-mobile) .workspace-ribbon.mod-primary .sidebar-toggle-button.mod-left {
+  margin-top: var(--wb-gap);
+}

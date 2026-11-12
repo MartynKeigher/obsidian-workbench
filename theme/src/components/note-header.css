@@ -1,0 +1,10 @@
+.view-header-title {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.workspace-leaf-content > .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller,
+.workspace-leaf-content .markdown-reading-view > .markdown-preview-view {
+  padding-top: 20px;
+}

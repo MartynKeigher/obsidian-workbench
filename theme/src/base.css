@@ -1,0 +1,37 @@
+/* Base */
+
+body.theme-light,
+body.theme-dark {
+  --wb-chevron-size: 6px;
+  --wb-chevron-open: translateY(-2px) rotate(45deg);
+  --wb-chevron-closed: translateX(-2px) rotate(-45deg);
+  --wb-focus: var(--accent);
+}
+
+:is(.clickable-icon, .copy-code-button, .nav-file-title, .nav-folder-title, .tree-item-self, .workspace-tab-header, .callout-fold, .canvas-control-item):focus-visible {
+  outline: 2px solid var(--wb-focus);
+  outline-offset: -2px;
+}
+
+.markdown-rendered a:focus-visible {
+  outline: 2px solid var(--wb-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.callout-icon .svg-icon,
+.callout-fold .svg-icon,
+.tree-item-icon .svg-icon,
+.workspace-tab-header-status-icon .svg-icon,
+.workspace-tab-header-inner-close-button .svg-icon,
+.clickable-icon .svg-icon {
+  display: block;
+}
+
+.callout-icon,
+.tree-item-icon,
+.workspace-tab-header-status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

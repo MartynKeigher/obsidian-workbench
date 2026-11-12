@@ -1,0 +1,17 @@
+button:not(.clickable-icon) {
+  border: 1px solid var(--control-line);
+  font-weight: 600;
+}
+
+button.mod-cta {
+  border-color: var(--accent);
+}
+
+button.mod-cta:hover {
+  border-color: var(--accent-ink);
+}
+
+button.mod-destructive,
+button.mod-warning {
+  border-color: var(--err-line);
+}

@@ -1,0 +1,335 @@
+/* Sidebar tabs */
+
+.mod-left-split .workspace-tab-header-container .workspace-tab-header,
+.mod-right-split .workspace-tab-header-container .workspace-tab-header {
+  color: var(--header-muted);
+  border-radius: 6px;
+}
+
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active {
+  color: var(--header-ink);
+  background-color: color-mix(in srgb, var(--header-ink) 14%, transparent);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) > .workspace-tabs > .workspace-tab-header-container {
+  box-sizing: border-box;
+  height: calc(var(--header-height) + var(--wb-gap));
+  padding-top: var(--wb-gap);
+  padding-left: calc(var(--wb-gap) + 10px + 8px);
+  z-index: 1;
+}
+
+body:not(.is-mobile).is-hidden-frameless:not(.is-fullscreen) .mod-left-split > .workspace-tabs.mod-top-left-space > .workspace-tab-header-container {
+  padding-left: calc(var(--wb-gap) + 10px + 8px + var(--frame-left-space));
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) > .workspace-tabs > .workspace-tab-container {
+  margin-top: 0;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) > .workspace-tabs > .workspace-tab-header-container > .workspace-tab-header-container-inner {
+  box-sizing: border-box;
+  height: calc(100% + 2px);
+  margin: 0 -10px;
+  padding: 0 10px;
+  align-items: flex-end;
+  gap: 2px;
+  overflow: visible;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header {
+  box-sizing: border-box;
+  width: 38px;
+  height: 34px;
+  padding: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--header-2);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
+  height: 100%;
+  padding: 0;
+  justify-content: center;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active {
+  width: auto;
+  min-width: 38px;
+  flex-shrink: 0;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+  gap: 6px;
+  padding: 0 12px 0 10px;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner::after,
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header:not(.is-active)::before,
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header:not(.is-active)::after {
+  display: none;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .nav-header::before {
+  display: none;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .nav-header {
+  justify-content: flex-end;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header:not(.is-active) {
+  clip-path: inset(0 0 2px 0);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+  background-color: color-mix(in srgb, var(--header-ink) 9%, var(--header-2));
+  color: var(--header-ink);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner {
+  background-color: transparent;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active {
+  --icon-color: var(--muted);
+  --icon-color-hover: var(--ink);
+  --icon-color-active: var(--ink);
+  --icon-color-focused: var(--ink);
+  --tab-text-color-focused-active: var(--ink);
+  --tab-text-color-focused-active-current: var(--ink);
+  --background-modifier-hover: var(--hover);
+  --wb-focus: var(--accent);
+  background-color: var(--pane);
+  border: 1px solid var(--wb-card-line, var(--line));
+  border-bottom: 0;
+  color: var(--ink);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::before,
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border: 0 solid var(--wb-card-line, var(--line));
+  border-bottom-width: 1px;
+  clip-path: inset(0);
+  pointer-events: none;
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::before {
+  left: -8px;
+  right: auto;
+  border-right-width: 1px;
+  border-radius: 0 0 8px 0;
+  box-shadow: 4px 4px 0 4px var(--pane);
+}
+
+body:not(.is-mobile) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active::after {
+  right: -8px;
+  left: auto;
+  border-left-width: 1px;
+  border-radius: 0 0 0 8px;
+  box-shadow: -4px 4px 0 4px var(--pane);
+}
+
+/* Panel headers */
+
+:is(.mod-left-split, .mod-right-split) .nav-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 0;
+}
+
+:is(.mod-left-split, .mod-right-split) .nav-header::before {
+  flex: none;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+:is(.mod-left-split, .mod-right-split) [data-type="file-explorer"] .nav-header::before { content: "Files"; }
+:is(.mod-left-split, .mod-right-split) [data-type="search"] .nav-header::before { content: "Search"; }
+:is(.mod-left-split, .mod-right-split) [data-type="bookmarks"] .nav-header::before { content: "Bookmarks"; }
+:is(.mod-left-split, .mod-right-split) [data-type="tag"] .nav-header::before { content: "Tags"; }
+:is(.mod-left-split, .mod-right-split) [data-type="backlink"] .nav-header::before { content: "Backlinks"; }
+:is(.mod-left-split, .mod-right-split) [data-type="outgoing-link"] .nav-header::before { content: "Outgoing"; }
+:is(.mod-left-split, .mod-right-split) [data-type="outline"] .nav-header::before { content: "Outline"; }
+:is(.mod-left-split, .mod-right-split) [data-type="all-properties"] .nav-header::before { content: "Properties"; }
+
+:is(.mod-left-split, .mod-right-split) .nav-header > .search-input-container {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+:is(.mod-left-split, .mod-right-split) .nav-buttons-container {
+  justify-content: flex-end;
+  gap: 4px;
+  margin-left: auto;
+}
+
+:is(.mod-left-split, .mod-right-split) .nav-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--control-line);
+  border-radius: 6px;
+  background-color: var(--control);
+  color: var(--ink-2);
+}
+
+:is(.mod-left-split, .mod-right-split) .nav-action-button:hover {
+  background-color: var(--hover);
+  color: var(--ink);
+}
+
+:is(.mod-left-split, .mod-right-split) .nav-action-button.is-active {
+  border-color: var(--accent-line);
+  background-color: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+/* Minimized sidebars */
+
+body:not(.is-mobile) {
+  --wb-rail-width: 36px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed {
+  display: flex !important;
+  flex: 0 0 auto;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split {
+  min-width: calc(var(--wb-rail-width) + var(--wb-gap));
+}
+
+body:not(.is-mobile) .workspace-split.mod-right-split {
+  min-width: calc(var(--wb-rail-width) + var(--wb-gap) * 2);
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > :not(.workspace-sidedock-vault-profile, .workspace-tabs) {
+  display: none !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs {
+  --wb-rail-top: 0px;
+  --wb-rail-bottom: var(--wb-gap);
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  flex-basis: 0;
+  min-height: 0;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs > :not(.workspace-tab-header-container) {
+  display: none !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs > .workspace-tab-header-container,
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header-container-inner,
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active,
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner {
+  display: contents !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header-container > :not(.workspace-tab-header-container-inner),
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header:not(.is-active),
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active::before,
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active::after,
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner > :not(.workspace-tab-header-inner-title),
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner::after {
+  display: none !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  display: flex !important;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--wb-rail-top) + 16px);
+  bottom: calc(var(--wb-rail-bottom) + 16px);
+  left: var(--wb-gap);
+  width: var(--wb-rail-width);
+  writing-mode: vertical-rl;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-sidedock-vault-profile {
+  height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  overflow: visible;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs::before {
+  content: "";
+  flex: 1 1 auto;
+  min-height: 0;
+  box-sizing: border-box;
+  margin: var(--wb-rail-top) 0 var(--wb-rail-bottom) var(--wb-gap);
+  background-color: var(--pane);
+  border: 1px solid var(--wb-card-line, var(--line));
+  border-radius: 10px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs:nth-child(1 of .workspace-tabs) {
+  --wb-rail-top: calc(var(--header-height) + var(--wb-gap));
+}
+
+body:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs:nth-last-child(1 of .workspace-tabs) {
+  --wb-rail-bottom: var(--wb-status-height);
+}
+
+body:not(.is-mobile) .workspace-split.mod-right-split.is-sidedock-collapsed > .workspace-tabs::before {
+  margin-right: var(--wb-gap);
+}
+
+/* Search and counts */
+
+:is(.mod-left-split, .mod-right-split) .search-empty-state {
+  margin: 2px 0 8px;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+/* Counts (backlinks, search results) */
+.tree-item-flair {
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  background-color: var(--chip);
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 700;
+}

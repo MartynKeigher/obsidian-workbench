@@ -1,0 +1,146 @@
+/* Cards */
+
+body.theme-light,
+body.theme-dark {
+  --wb-gap: 10px;
+  --wb-status-height: 30px;
+  --wb-footer-height: 41px;
+}
+
+.workspace {
+  background-color: var(--bg);
+}
+
+body:not(.is-mobile) .workspace {
+  background-color: var(--header);
+}
+
+.mod-left-split .workspace-tab-container,
+.mod-root .workspace-tab-container,
+.mod-right-split .workspace-tab-container {
+  background-color: var(--pane);
+  border: 1px solid var(--wb-card-line, var(--line));
+  border-radius: 10px;
+  overflow: hidden;
+  margin: var(--wb-gap) 0 var(--wb-status-height) var(--wb-gap);
+}
+
+.mod-right-split .workspace-tab-container {
+  margin-right: var(--wb-gap);
+}
+
+.mod-left-split .workspace-leaf,
+.mod-right-split .workspace-leaf,
+.mod-left-split .workspace-leaf-content,
+.mod-right-split .workspace-leaf-content {
+  background-color: transparent;
+}
+
+body.is-mobile,
+body.is-popout-window {
+  --wb-status-height: var(--wb-gap);
+}
+
+body:not(.is-mobile):not(.is-popout-window) .workspace {
+  --wb-status-height: calc(var(--wb-footer-height) + var(--wb-gap));
+}
+
+body:not(.is-phone) .workspace-split.mod-horizontal > .workspace-tabs:not(:nth-last-child(1 of .workspace-tabs)) .workspace-tab-container {
+  margin-bottom: var(--wb-gap);
+}
+
+body:not(.is-phone) .workspace-split.mod-root {
+  background-color: var(--header);
+}
+
+body.is-tablet .mod-root,
+body.is-popout-window .mod-root {
+  padding-right: var(--wb-gap);
+}
+
+.workspace-leaf-resize-handle {
+  --divider-color: transparent;
+}
+
+/* Resize handles */
+
+.mod-left-split > .workspace-leaf-resize-handle,
+.mod-right-split > .workspace-leaf-resize-handle {
+  overflow: visible;
+}
+
+.mod-left-split > .workspace-leaf-resize-handle::after,
+.mod-right-split > .workspace-leaf-resize-handle::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 16px);
+  width: 3px;
+  height: 32px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.mod-left-split > .workspace-leaf-resize-handle::after {
+  left: 6px;
+}
+
+.mod-right-split > .workspace-leaf-resize-handle::after {
+  left: 3px;
+}
+
+.mod-left-split > .workspace-leaf-resize-handle:is(:hover, :active)::after,
+.mod-right-split > .workspace-leaf-resize-handle:is(:hover, :active)::after {
+  opacity: 1;
+}
+
+.workspace-split.mod-horizontal > .workspace-tabs:not(:nth-last-child(1 of .workspace-tabs)) > .workspace-leaf-resize-handle {
+  overflow: visible;
+}
+
+.workspace-split.mod-horizontal > .workspace-tabs:not(:nth-last-child(1 of .workspace-tabs)) > .workspace-leaf-resize-handle::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 16px);
+  bottom: calc(var(--wb-gap) / 2 - 1.5px);
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.workspace-split.mod-horizontal > .workspace-tabs:not(:nth-last-child(1 of .workspace-tabs)) > .workspace-leaf-resize-handle:is(:hover, :active)::after {
+  opacity: 1;
+}
+
+.workspace-split.mod-vertical > .workspace-tabs + .workspace-tabs::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 16px + var(--header-height) / 2);
+  left: calc(var(--wb-gap) / 2 - 1.5px);
+  width: 3px;
+  height: 32px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.workspace-split.mod-vertical > .workspace-tabs:has(> .workspace-leaf-resize-handle:is(:hover, :active)) + .workspace-tabs::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mod-left-split > .workspace-leaf-resize-handle::after,
+  .mod-right-split > .workspace-leaf-resize-handle::after,
+  .workspace-split.mod-horizontal > .workspace-tabs > .workspace-leaf-resize-handle::after,
+  .workspace-split.mod-vertical > .workspace-tabs + .workspace-tabs::before {
+    transition: none;
+  }
+}

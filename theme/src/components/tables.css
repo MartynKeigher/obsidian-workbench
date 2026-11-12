@@ -1,0 +1,27 @@
+.markdown-rendered table {
+  border-collapse: collapse;
+  font-size: 0.875em;
+}
+
+.markdown-rendered th {
+  font-size: 0.857em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 6px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.markdown-rendered td {
+  padding: 4px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.markdown-rendered tbody tr:nth-child(even) td {
+  background-color: var(--row-alt);
+}

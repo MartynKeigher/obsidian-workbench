@@ -1,0 +1,58 @@
+.is-phone .mod-root .workspace-tab-container {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.is-phone .mod-root .workspace-leaf-content {
+  background-color: var(--bg);
+}
+
+.is-phone .workspace-leaf-content > .view-header {
+  --wb-focus: var(--header-accent);
+  background-color: var(--header);
+  color: var(--header-muted);
+  border-bottom: 0;
+}
+
+.is-phone .workspace-leaf-content > .view-header .view-header-title {
+  color: var(--header-ink);
+  font-weight: 600;
+}
+
+.is-phone .workspace-leaf-content > .view-header .clickable-icon {
+  color: var(--header-muted);
+}
+
+.is-phone .mod-root .workspace-leaf-content > .view-content {
+  width: calc(100% - 16px);
+  height: calc(100% - var(--header-height) - 8px);
+  margin: 8px 8px 0;
+  background-color: var(--pane);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.is-phone .mobile-navbar {
+  background-color: var(--bg);
+  border-top: 0;
+}
+
+.is-phone .workspace-drawer.mod-left {
+  background-color: var(--pane);
+  border-right: 1px solid var(--line);
+  border-radius: 0 14px 0 0;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 22%);
+}
+
+.is-phone .workspace-drawer .workspace-leaf-content {
+  background-color: transparent;
+}
+
+.is-phone .workspace-drawer .nav-folder-title,
+.is-phone .workspace-drawer .nav-file-title {
+  min-height: 36px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

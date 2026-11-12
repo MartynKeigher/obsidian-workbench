@@ -1,0 +1,12 @@
+{
+  "name": "workbench-obsidian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Workbench for Obsidian: an Obsidian theme built on the Workbench UI design tokens.",
+  "author": "Martyn Keigher",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node theme/build.mjs"
+  }
+}

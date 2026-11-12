@@ -1,0 +1,104 @@
+/* Headings */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-1 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-2 {
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-1,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-2,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-3,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-4 {
+  text-transform: uppercase;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-5,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-6 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Inline code */
+.markdown-source-view.mod-cm6.is-live-preview .cm-inline-code {
+  background-color: var(--chip);
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--ink);
+}
+
+/* Quotes */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-left: 3px solid var(--control-line);
+  padding-left: 16px;
+  color: var(--ink-2);
+  font-style: italic;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
+  display: none;
+}
+
+/* Tags */
+.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag {
+  background-color: var(--accent-soft);
+  color: var(--accent-ink);
+  border: 1px solid var(--accent-line);
+  padding: 1px 0;
+  line-height: 1.3;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag-begin {
+  border-right: 0;
+  border-radius: 99px 0 0 99px;
+  padding-left: 9px;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag-end {
+  border-left: 0;
+  border-radius: 0 99px 99px 0;
+  padding-right: 9px;
+}
+
+/* Checked tasks */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task="x"], [data-task="X"]) {
+  color: var(--checklist-done-color);
+  font-style: italic;
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in srgb, var(--ink) 30%, var(--pane));
+}
+
+/* Code blocks */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-codeblock {
+  background-color: var(--code);
+  border-left: 1px solid var(--wb-code-line, var(--line));
+  border-right: 1px solid var(--wb-code-line, var(--line));
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-codeblock-begin {
+  border-top: 1px solid var(--wb-code-line, var(--line));
+  border-radius: 8px 8px 0 0;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-codeblock-end {
+  border-bottom: 1px solid var(--wb-code-line, var(--line));
+  border-radius: 0 0 8px 8px;
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair {
+  background-color: var(--pane);
+  border: 1px solid var(--control-line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 9px;
+}

@@ -1,0 +1,9 @@
+.status-bar {
+  --slider-track-background: var(--control-line);
+  right: var(--wb-gap);
+  box-sizing: border-box;
+  height: var(--wb-footer-height);
+  align-items: center;
+  border-top: 0;
+  color: var(--muted);
+}
