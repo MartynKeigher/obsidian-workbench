@@ -16,7 +16,7 @@ It's based on [Workbench UI](https://github.com/MartynKeigher/workbench-ui), so 
 a minute:~~
 
 ~~1. Open your vault's folder and find the hidden `.obsidian` folder inside it. In there, open (or
-   create) a `themes` folder, then make a new folder inside that called `Workbench`.
+   create) a `themes` folder, then make a new folder inside that called `Workbench`.~~
    
 ~~2. Download `theme.css` and `manifest.json` from this page and drop them into the `Workbench`
    folder.~~
