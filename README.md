@@ -17,9 +17,11 @@ a minute:~~
 
 ~~1. Open your vault's folder and find the hidden `.obsidian` folder inside it. In there, open (or
    create) a `themes` folder, then make a new folder inside that called `Workbench`.
-2. Download `theme.css` and `manifest.json` from this page and drop them into the `Workbench`
-   folder.
-3. In Obsidian, go to **Settings → Appearance → Themes** and pick **Workbench**.~~ 
+   
+~~2. Download `theme.css` and `manifest.json` from this page and drop them into the `Workbench`
+   folder.~~
+   
+~~3. In Obsidian, go to **Settings → Appearance → Themes** and pick **Workbench**.~~ 
 
 Click on 'Install and Use' above! 
 
