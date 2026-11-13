@@ -4,8 +4,7 @@ A calm, tidy theme for Obsidian. Workbench gives your notes warm parchment panel
 headings and a dark top bar, and it looks just as good in dark mode. It's designed for
 Windows, macOS, iPad and iPhone. Android devices _should_ work too, but I haven't tested on those.
 
-It's based on [Workbench UI](https://github.com/MartynKeigher/workbench-ui), so if you use that
-elsewhere, Obsidian will feel right at home.
+It's based on [Workbench UI](https://github.com/MartynKeigher/workbench-ui), so if you use that elsewhere, Obsidian will feel right at home.
 
 ![Workbench, a theme for Obsidian, split diagonally to show light mode on the left and dark mode on the right](images/workbench-cover-split.png)
 
@@ -13,14 +12,16 @@ elsewhere, Obsidian will feel right at home.
 
 ## Getting started
 
-Workbench isn't in Obsidian's theme gallery just yet, so for now you'll add it by hand. It only takes
-a minute:
+~~Workbench isn't in Obsidian's theme gallery just yet, so for now you'll add it by hand. It only takes
+a minute:~~
 
-1. Open your vault's folder and find the hidden `.obsidian` folder inside it. In there, open (or
+~~1. Open your vault's folder and find the hidden `.obsidian` folder inside it. In there, open (or
    create) a `themes` folder, then make a new folder inside that called `Workbench`.
 2. Download `theme.css` and `manifest.json` from this page and drop them into the `Workbench`
    folder.
-3. In Obsidian, go to **Settings → Appearance → Themes** and pick **Workbench**.
+3. In Obsidian, go to **Settings → Appearance → Themes** and pick **Workbench**.~~ 
+
+Click on 'Install and Use' above! 
 
 That's it! 🎉
 
