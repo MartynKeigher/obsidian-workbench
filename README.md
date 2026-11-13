@@ -1,5 +1,13 @@
 # Workbench for Obsidian
 
+![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&query=%24.Workbench.download&label=downloads&color=2e5e3e&logo=obsidian)
+![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmartynkeigher%2Fobsidian-workbench%2Fmain%2Fmanifest.json&query=%24.version&label=version&color=2e5e3e)
+![Min Obsidian](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmartynkeigher%2Fobsidian-workbench%2Fmain%2Fmanifest.json&query=%24.minAppVersion&label=obsidian&prefix=%E2%89%A5%20&color=7c3aed&logo=obsidian)
+![Stars](https://img.shields.io/github/stars/martynkeigher/obsidian-workbench?style=flat&color=2e5e3e)
+![License](https://img.shields.io/github/license/martynkeigher/obsidian-workbench?color=2e5e3e)
+![Last commit](https://img.shields.io/github/last-commit/martynkeigher/obsidian-workbench?color=2e5e3e)
+![Issues](https://img.shields.io/github/issues/martynkeigher/obsidian-workbench?color=2e5e3e)
+
 A calm, tidy theme for Obsidian. Workbench gives your notes warm parchment panels, deep green
 headings and a dark top bar, and it looks just as good in dark mode. It's designed for
 Windows, macOS, iPad and iPhone. Android devices _should_ work too, but I haven't tested on those.
@@ -23,7 +31,8 @@ a minute:~~
    
 ~~3. In Obsidian, go to **Settings → Appearance → Themes** and pick **Workbench**.~~ 
 
-Click on 'Install and Use' above! 
+In Obsidian, go to **Settings → Appearance → Themes → Manage**, search for **Workbench**,
+then click **Install and use**.
 
 That's it! 🎉
 
