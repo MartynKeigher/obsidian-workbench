@@ -33,6 +33,7 @@ export const SECTIONS = [
   ['components/canvas.css', 'Canvas'],
   ['components/prompts.css', 'Prompts and modals'],
   ['components/light-mode.css', 'Light mode'],
+  ['components/pop.css', 'Companion · Pop color'],
   ['components/mobile.css', 'Phones'],
 ];
 

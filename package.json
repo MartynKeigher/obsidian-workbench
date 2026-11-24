@@ -7,6 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "node theme/build.mjs"
+    "build": "node theme/build.mjs",
+    "check:pop": "node theme/check-pop.mjs"
   }
 }

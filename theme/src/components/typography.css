@@ -70,14 +70,14 @@ body.theme-light .markdown-rendered h1 {
 
 /* Links */
 .markdown-rendered a.internal-link {
-  color: var(--accent);
+  color: var(--link-color);
   font-weight: 500;
   text-decoration-color: color-mix(in srgb, currentColor 75%, transparent);
   text-underline-offset: 3px;
 }
 
 .markdown-rendered a.external-link {
-  color: var(--accent);
+  color: var(--link-external-color);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, currentColor 75%, transparent);
   text-underline-offset: 3px;
