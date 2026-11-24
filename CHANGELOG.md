@@ -2,6 +2,17 @@
 
 All notable changes to Workbench are listed here, newest first.
 
+## [1.2.0] - 2026-11-24
+
+### Added
+- Support for **Pop color** in the [Workbench Companion](https://github.com/MartynKeigher/obsidian-workbench-companion) plugin. Pick one of 8 colors (Amber, Cobalt, Fuchsia, Lime, Raspberry, Signal Orange, Tomato or Ultraviolet) for links, the active file, tags, ticked tasks, highlights, note callouts, the line under the note title and the Sync icon, with a shade for light mode and one for dark.
+
+### Changed
+- Reading-view links now use Obsidian's link color variables instead of the accent directly. They look the same.
+
+### Notes
+- Without the plugin, or with Pop color set to None, Workbench looks exactly as before.
+
 ## [1.1.1] - 2026-11-24
 
 ### Fixed
@@ -34,6 +45,7 @@ All notable changes to Workbench are listed here, newest first.
 - Built-in **Source Sans 3** and **Source Code Pro** fonts.
 - Styling for callouts, canvas, code, embeds, properties, tables, tags, tasks, sidebars, the ribbon, status bar, prompts and mobile.
 
+[1.2.0]: https://github.com/MartynKeigher/obsidian-workbench/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/MartynKeigher/obsidian-workbench/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/MartynKeigher/obsidian-workbench/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/MartynKeigher/obsidian-workbench/compare/1.0.0...1.0.1
