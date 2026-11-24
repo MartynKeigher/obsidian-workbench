@@ -1,9 +1,8 @@
 /* Palette */
 
 body.theme-light {
-  --accent-ink: #0b4f4a;
-  --wb-note-bg: #f7f2e7;
-  --wb-code-bg: #ece5d6;
+  --wb-note-bg: var(--pane);
+  --wb-code-bg: var(--code);
   --wb-code-line: #d9d0bc;
   --nav-item-color-active: #0a525c;
 }
@@ -17,28 +16,28 @@ body.theme-light .view-header-title {
 /* Headings */
 
 body.theme-light {
-  --h2-color: var(--accent-ink);
-  --h3-color: var(--accent-ink);
-  --h4-color: var(--accent-ink);
+  --h2-color: var(--heading-ink);
+  --h3-color: var(--heading-ink);
+  --h4-color: var(--heading-ink);
 }
 
 body.theme-light .markdown-rendered :is(h2, h3, h4) {
-  color: var(--accent-ink);
+  color: var(--heading-ink);
 }
 
 /* Sidebar labels */
 
 body.theme-light {
-  --nav-heading-color: var(--accent-ink);
-  --nav-heading-color-hover: var(--accent-ink);
-  --nav-heading-color-collapsed: var(--accent-ink);
-  --nav-heading-color-collapsed-hover: var(--accent-ink);
+  --nav-heading-color: var(--caption-ink);
+  --nav-heading-color-hover: var(--caption-ink);
+  --nav-heading-color-collapsed: var(--caption-ink);
+  --nav-heading-color-collapsed-hover: var(--caption-ink);
 }
 
 body.theme-light :is(.mod-left-split, .mod-right-split) .nav-header::before,
 body.theme-light:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 body.theme-light :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
-  color: var(--accent-ink);
+  color: var(--caption-ink);
 }
 
 body.theme-light .nav-folder-title,
@@ -85,9 +84,9 @@ body .menu:has(.svg-icon.open-vault) :is(.menu-item-title, .menu-item-icon, .men
 /* Status bar */
 
 body.theme-light .status-bar {
-  --icon-color: var(--accent-ink);
-  --icon-color-hover: var(--accent-ink);
-  color: var(--accent-ink);
+  --icon-color: var(--statusbar-ink);
+  --icon-color-hover: var(--statusbar-ink);
+  color: var(--statusbar-ink);
 }
 
 /* Tables */
@@ -99,7 +98,7 @@ body.theme-light .markdown-rendered th {
 /* Bold and H5/H6 */
 
 body.theme-light {
-  --bold-color: var(--accent-ink);
+  --bold-color: var(--strong-ink);
 }
 
 body.theme-light {
@@ -142,10 +141,6 @@ body.theme-light :is(.mod-root, .mod-left-split, .mod-right-split) {
 /* Header band */
 
 body.theme-light {
-  --header: #0f2a27;
-  --header-2: color-mix(in srgb, #0f2a27 86%, #ffffff);
-  --header-line: color-mix(in srgb, #0f2a27 76%, #ffffff);
-  --header-muted: #c3d8d5;
   --wb-card-line: var(--wb-note-bg);
 }
 

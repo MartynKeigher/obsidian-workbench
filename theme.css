@@ -135,15 +135,15 @@ body.theme-dark {
 
   /* Surfaces */
   --bg: #efede8;
-  --pane: #ffffff;
+  --pane: #f7f2e7;
   --control: #ffffff;
-  --hover: #f6f5f2;
-  --row-alt: #f6f5f1;
-  --tile: #faf9f6;
-  --chip: #f3efe6;
+  --hover: #eee8da;
+  --row-alt: #eee8d9;
+  --tile: #f2ecde;
+  --chip: #ebe2ce;
   --pill: #f1f3f4;
   --pill-line: #d9dde1;
-  --code: #fbfcfc;
+  --code: #ece5d6;
   --code-head: #f3fafb;
   --highlight: #fde9b6;
   --flash: #fff3b0;
@@ -155,6 +155,12 @@ body.theme-dark {
   --faint: #646c74;
   --label: #8a4b00;
   --note: #1e7a3c;
+  /* Headings and small uppercase captions */
+  --heading-ink: var(--accent-ink);
+  --caption-ink: var(--accent-ink);
+  /* Bold and status bar text */
+  --strong-ink: var(--accent-ink);
+  --statusbar-ink: var(--accent-ink);
 
   /* Lines */
   --line: #dcd8d0;
@@ -163,17 +169,17 @@ body.theme-dark {
 
   /* Accent */
   --accent: #0e6f7d;
-  --accent-ink: #0a525c;
+  --accent-ink: #0b4f4a;
   --accent-soft: #e3f3f5;
   --accent-line: #c9e4e8;
   --on-accent: #ffffff;
 
   /* Header bar (dark in both modes) */
-  --header: #1d2329;
-  --header-2: #2b333b;
-  --header-line: #3b444d;
+  --header: #0f2a27;
+  --header-2: #314845;
+  --header-line: #495d5b;
   --header-ink: #f4f2ee;
-  --header-muted: #b9c0c7;
+  --header-muted: #c3d8d5;
   --header-accent: #5fd0dc;
   --on-header-accent: #0b2a2e;
 
@@ -206,7 +212,7 @@ body.theme-dark {
   --hl-string: #a1260d;
   --hl-variable: #0b5394;
   --hl-number: #116644;
-  --hl-comment: #4f7a4f;
+  --hl-comment: #456d45;
   --hl-title: #795e26;
   --hl-params: #8a4b00;
 
@@ -256,6 +262,10 @@ body.theme-dark {
   --faint: #a0a8b0;
   --label: #f0b067;
   --note: #74d095;
+  --heading-ink: var(--ink);
+  --caption-ink: var(--muted);
+  --strong-ink: var(--accent-ink);
+  --statusbar-ink: var(--muted);
 
   --line: #31383f;
   --line-soft: #272d33;
@@ -2350,9 +2360,8 @@ body.theme-dark {
 /* Palette */
 
 body.theme-light {
-  --accent-ink: #0b4f4a;
-  --wb-note-bg: #f7f2e7;
-  --wb-code-bg: #ece5d6;
+  --wb-note-bg: var(--pane);
+  --wb-code-bg: var(--code);
   --wb-code-line: #d9d0bc;
   --nav-item-color-active: #0a525c;
 }
@@ -2366,28 +2375,28 @@ body.theme-light .view-header-title {
 /* Headings */
 
 body.theme-light {
-  --h2-color: var(--accent-ink);
-  --h3-color: var(--accent-ink);
-  --h4-color: var(--accent-ink);
+  --h2-color: var(--heading-ink);
+  --h3-color: var(--heading-ink);
+  --h4-color: var(--heading-ink);
 }
 
 body.theme-light .markdown-rendered :is(h2, h3, h4) {
-  color: var(--accent-ink);
+  color: var(--heading-ink);
 }
 
 /* Sidebar labels */
 
 body.theme-light {
-  --nav-heading-color: var(--accent-ink);
-  --nav-heading-color-hover: var(--accent-ink);
-  --nav-heading-color-collapsed: var(--accent-ink);
-  --nav-heading-color-collapsed-hover: var(--accent-ink);
+  --nav-heading-color: var(--caption-ink);
+  --nav-heading-color-hover: var(--caption-ink);
+  --nav-heading-color-collapsed: var(--caption-ink);
+  --nav-heading-color-collapsed-hover: var(--caption-ink);
 }
 
 body.theme-light :is(.mod-left-split, .mod-right-split) .nav-header::before,
 body.theme-light:not(.is-mobile) .workspace-split.mod-sidedock.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 body.theme-light :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
-  color: var(--accent-ink);
+  color: var(--caption-ink);
 }
 
 body.theme-light .nav-folder-title,
@@ -2434,9 +2443,9 @@ body .menu:has(.svg-icon.open-vault) :is(.menu-item-title, .menu-item-icon, .men
 /* Status bar */
 
 body.theme-light .status-bar {
-  --icon-color: var(--accent-ink);
-  --icon-color-hover: var(--accent-ink);
-  color: var(--accent-ink);
+  --icon-color: var(--statusbar-ink);
+  --icon-color-hover: var(--statusbar-ink);
+  color: var(--statusbar-ink);
 }
 
 /* Tables */
@@ -2448,7 +2457,7 @@ body.theme-light .markdown-rendered th {
 /* Bold and H5/H6 */
 
 body.theme-light {
-  --bold-color: var(--accent-ink);
+  --bold-color: var(--strong-ink);
 }
 
 body.theme-light {
@@ -2491,10 +2500,6 @@ body.theme-light :is(.mod-root, .mod-left-split, .mod-right-split) {
 /* Header band */
 
 body.theme-light {
-  --header: #0f2a27;
-  --header-2: color-mix(in srgb, #0f2a27 86%, #ffffff);
-  --header-line: color-mix(in srgb, #0f2a27 76%, #ffffff);
-  --header-muted: #c3d8d5;
   --wb-card-line: var(--wb-note-bg);
 }
 
