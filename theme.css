@@ -2551,6 +2551,137 @@ body.theme-light:not(.is-mobile) :is(.mod-root, .mod-left-split, .mod-right-spli
 }
 
 /* ========================================
+   COMPANION · POP COLOR
+   ======================================== */
+
+/* Pop color, set by the Workbench Companion plugin.
+   The plugin puts one wbc-pop-<id> class on <body>, or none for None. Every
+   rule here is scoped to that class, so without the plugin nothing changes.
+   Keep each new colour at 3:1 or more against --pane: npm run check:pop. */
+
+/* Colours: one pair per option, with an RGB copy for Obsidian's callouts */
+body.theme-light.wbc-pop-amber { --wb-pop: #B06A00; --wb-pop-rgb: 176, 106, 0; }
+body.theme-dark.wbc-pop-amber { --wb-pop: #F0B067; --wb-pop-rgb: 240, 176, 103; }
+
+body.theme-light.wbc-pop-cobalt { --wb-pop: #2350E0; --wb-pop-rgb: 35, 80, 224; }
+body.theme-dark.wbc-pop-cobalt { --wb-pop: #6F9CFF; --wb-pop-rgb: 111, 156, 255; }
+
+body.theme-light.wbc-pop-fuchsia { --wb-pop: #B0169C; --wb-pop-rgb: 176, 22, 156; }
+body.theme-dark.wbc-pop-fuchsia { --wb-pop: #F070E0; --wb-pop-rgb: 240, 112, 224; }
+
+body.theme-light.wbc-pop-lime { --wb-pop: #4F7D00; --wb-pop-rgb: 79, 125, 0; }
+body.theme-dark.wbc-pop-lime { --wb-pop: #C6E86B; --wb-pop-rgb: 198, 232, 107; }
+
+body.theme-light.wbc-pop-raspberry { --wb-pop: #C2185B; --wb-pop-rgb: 194, 24, 91; }
+body.theme-dark.wbc-pop-raspberry { --wb-pop: #FF6FAE; --wb-pop-rgb: 255, 111, 174; }
+
+body.theme-light.wbc-pop-signal-orange { --wb-pop: #D14800; --wb-pop-rgb: 209, 72, 0; }
+body.theme-dark.wbc-pop-signal-orange { --wb-pop: #FF8A3D; --wb-pop-rgb: 255, 138, 61; }
+
+body.theme-light.wbc-pop-tomato { --wb-pop: #D13F25; --wb-pop-rgb: 209, 63, 37; }
+body.theme-dark.wbc-pop-tomato { --wb-pop: #FF7A59; --wb-pop-rgb: 255, 122, 89; }
+
+body.theme-light.wbc-pop-ultraviolet { --wb-pop: #6A1BFF; --wb-pop-rgb: 106, 27, 255; }
+body.theme-dark.wbc-pop-ultraviolet { --wb-pop: #A98BFF; --wb-pop-rgb: 169, 139, 255; }
+
+/* Derived shades, and Obsidian variables that take the pop */
+body[class*="wbc-pop-"] {
+  --wb-pop-tint: color-mix(in srgb, var(--wb-pop) 16%, var(--pane));
+  --wb-pop-line: color-mix(in srgb, var(--wb-pop) 30%, var(--pane));
+
+  --link-color: var(--wb-pop);
+  --link-color-hover: color-mix(in srgb, var(--wb-pop) 80%, var(--ink));
+  --link-external-color: var(--wb-pop);
+  --link-external-color-hover: color-mix(in srgb, var(--wb-pop) 80%, var(--ink));
+
+  --nav-item-background-active: var(--wb-pop-tint);
+
+  --tag-color: var(--wb-pop);
+  --tag-color-hover: var(--wb-pop);
+  --tag-background: var(--wb-pop-tint);
+  --tag-background-hover: var(--wb-pop-tint);
+  --tag-border-color: var(--wb-pop-line);
+
+  --callout-default: var(--wb-pop-rgb);
+}
+
+body.theme-light[class*="wbc-pop-"] { --wb-on-pop: #FFFFFF; }
+body.theme-dark[class*="wbc-pop-"] { --wb-on-pop: #14181C; }
+
+/* Links */
+body[class*="wbc-pop-"] .markdown-rendered :is(a.internal-link, a.external-link) {
+  color: var(--wb-pop);
+}
+
+/* Active file: a bar on the left edge and a tinted row; the text keeps accent ink */
+body[class*="wbc-pop-"] .nav-file-title.is-active {
+  background-color: var(--wb-pop-tint);
+  box-shadow: inset 3px 0 0 var(--wb-pop);
+}
+
+/* Tags: reading view, Live Preview and the tags property */
+body[class*="wbc-pop-"] .markdown-rendered a.tag,
+body[class*="wbc-pop-"] .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag,
+body[class*="wbc-pop-"] .metadata-property[data-property-key="tags"] .multi-select-pill,
+body[class*="wbc-pop-"] .metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+  background-color: var(--wb-pop-tint);
+  border-color: var(--wb-pop-line);
+  color: var(--wb-pop);
+}
+
+/* Ticked tasks and highlight fill: only in notes, so other checkboxes keep the accent */
+body[class*="wbc-pop-"] :is(.markdown-rendered, .markdown-source-view) {
+  --checkbox-color: var(--wb-pop);
+  --checkbox-color-hover: var(--wb-pop);
+  --checkbox-marker-color: var(--wb-on-pop);
+  --text-highlight-bg: var(--wb-pop-tint);
+}
+
+/* Highlights: tinted fill and a pop underline; the text stays body ink */
+body[class*="wbc-pop-"] .markdown-rendered mark,
+body[class*="wbc-pop-"] .markdown-source-view .cm-highlight {
+  background-color: var(--wb-pop-tint);
+  color: var(--ink);
+  text-decoration: underline 2px var(--wb-pop);
+  text-underline-offset: 3px;
+}
+
+/* Note title and H1: a short pop rule on the left of the existing line */
+body[class*="wbc-pop-"] :is(.markdown-rendered h1, .inline-title),
+body[class*="wbc-pop-"] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-1 {
+  position: relative;
+}
+
+body[class*="wbc-pop-"] :is(.markdown-rendered h1, .inline-title)::after,
+body[class*="wbc-pop-"] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-header-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 44px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--wb-pop);
+}
+
+/* Sync icon in the status bar, unless it is showing an error */
+body[class*="wbc-pop-"] .status-bar-item.plugin-sync:not(.mod-error) .svg-icon {
+  color: var(--wb-pop);
+}
+
+/* Swatch beside the Pop color dropdown, in the plugin's settings */
+.wbc-pop-swatch {
+  display: inline-block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--control-line);
+  background-color: var(--wb-pop, var(--interactive-accent));
+}
+
+/* ========================================
    PHONES
    ======================================== */
 
