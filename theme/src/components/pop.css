@@ -38,8 +38,6 @@ body[class*="wbc-pop-"] {
   --link-external-color: var(--wb-pop);
   --link-external-color-hover: color-mix(in srgb, var(--wb-pop) 80%, var(--ink));
 
-  --nav-item-background-active: var(--wb-pop-tint);
-
   --tag-color: var(--wb-pop);
   --tag-color-hover: var(--wb-pop);
   --tag-background: var(--wb-pop-tint);
@@ -51,11 +49,6 @@ body[class*="wbc-pop-"] {
 
 body.theme-light[class*="wbc-pop-"] { --wb-on-pop: #FFFFFF; }
 body.theme-dark[class*="wbc-pop-"] { --wb-on-pop: #14181C; }
-
-/* Links */
-body[class*="wbc-pop-"] .markdown-rendered :is(a.internal-link, a.external-link) {
-  color: var(--wb-pop);
-}
 
 /* Active file: a bar on the left edge and a tinted row; the text keeps accent ink */
 body[class*="wbc-pop-"] .nav-file-title.is-active {
@@ -81,13 +74,26 @@ body[class*="wbc-pop-"] :is(.markdown-rendered, .markdown-source-view) {
   --text-highlight-bg: var(--wb-pop-tint);
 }
 
-/* Highlights: tinted fill and a pop underline; the text stays body ink */
-body[class*="wbc-pop-"] .markdown-rendered mark,
-body[class*="wbc-pop-"] .markdown-source-view .cm-highlight {
+/* Highlights: tinted fill and a pop underline; the text stays body ink.
+   Obsidian's coloured highlights, search matches, the == markers and struck
+   text keep their own look. */
+body[class*="wbc-pop-"] .markdown-rendered mark:not([data-highlight]),
+body[class*="wbc-pop-"] .markdown-source-view .cm-highlight:not([class*="cm-highlight-"], .obsidian-search-match-highlight) {
   background-color: var(--wb-pop-tint);
   color: var(--ink);
-  text-decoration: underline 2px var(--wb-pop);
+}
+
+body[class*="wbc-pop-"] .markdown-rendered mark:not([data-highlight]),
+body[class*="wbc-pop-"] .markdown-source-view .cm-highlight:not([class*="cm-highlight-"], .obsidian-search-match-highlight, .cm-formatting-highlight, .cm-strikethrough) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--wb-pop);
   text-underline-offset: 3px;
+}
+
+/* Callouts: note callouts take the pop too (the theme gives them the accent) */
+body[class*="wbc-pop-"] .callout[data-callout="note"] {
+  --wb-cc: var(--wb-pop);
 }
 
 /* Note title and H1: a short pop rule on the left of the existing line */
@@ -109,7 +115,7 @@ body[class*="wbc-pop-"] .markdown-source-view.mod-cm6.is-live-preview .HyperMD-h
 }
 
 /* Sync icon in the status bar, unless it is showing an error */
-body[class*="wbc-pop-"] .status-bar-item.plugin-sync:not(.mod-error) .svg-icon {
+body[class*="wbc-pop-"] .status-bar-item.plugin-sync .sync-status-icon:not(.mod-error) .svg-icon {
   color: var(--wb-pop);
 }
 
