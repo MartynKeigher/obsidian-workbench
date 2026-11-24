@@ -1397,6 +1397,33 @@ body:not(.is-mobile) .workspace-sidedock-vault-profile .workspace-drawer-vault-a
   gap: 4px;
 }
 
+/* With the ribbon turned off there's no column to pin the help and settings icons into. They sit
+   at the end of the vault footer row, and at the foot of the rail when the sidebar is collapsed. */
+
+body:not(.is-mobile):not(:has(.workspace-ribbon.mod-left)) .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+  position: static;
+  width: auto;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+body:not(.is-mobile):not(:has(.workspace-ribbon.mod-left)) .workspace-split.mod-left-split.is-sidedock-collapsed {
+  position: relative;
+}
+
+body:not(.is-mobile):not(:has(.workspace-ribbon.mod-left)) .mod-left-split.is-sidedock-collapsed .workspace-drawer-vault-actions {
+  position: absolute;
+  left: var(--wb-gap);
+  bottom: calc(var(--wb-footer-height) + var(--wb-gap) + 10px);
+  width: var(--wb-rail-width);
+  flex-direction: column;
+  margin-left: 0;
+}
+
+body:not(.is-mobile):not(:has(.workspace-ribbon.mod-left)) .workspace-split.mod-left-split.is-sidedock-collapsed > .workspace-tabs .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  bottom: calc(var(--wb-rail-bottom) + 76px);
+}
+
 /* ========================================
    RIGHT SIDEBAR
    ======================================== */
