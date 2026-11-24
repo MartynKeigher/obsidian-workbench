@@ -130,3 +130,8 @@ body[class*="wbc-pop-"] .status-bar-item.plugin-sync .sync-status-icon:not(.mod-
   border: 1px solid var(--control-line);
   background-color: var(--wb-pop, var(--interactive-accent));
 }
+
+/* A fixed-width dropdown, so it doesn't resize with each colour's name */
+.wbc-pop-swatch ~ select.dropdown {
+  width: 150px;
+}
